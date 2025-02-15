@@ -29,7 +29,7 @@ def get_html_from_url(url: str) -> [Quote,]:
     all_quotes = []
     while True:
 
-        current_page = f"{SITE_URL}/page/{PARAMS["page"]}"
+        current_page = f"{SITE_URL}/page/{PARAMS['page']}"
         print(f"Parsing {current_page}")
         page_html = requests.get(current_page).content
         page_soup = BeautifulSoup(page_html, "html.parser")
