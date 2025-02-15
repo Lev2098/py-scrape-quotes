@@ -25,7 +25,7 @@ def parse_quote(quote_tag: Tag) -> Quote:
     )
 
 
-def get_html_from_url(url: str) -> [Quote,]:
+def get_html_from_url(url: str) -> [Quote]:
     all_quotes = []
     while True:
 
@@ -48,7 +48,7 @@ def get_html_from_url(url: str) -> [Quote,]:
     return all_quotes
 
 
-def write_qoutes_to_csv(quotes: [Quote,], output_csv_path: str) -> None:
+def write_qoutes_to_csv(quotes: [Quote], output_csv_path: str) -> None:
     with open(output_csv_path, "w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(QUOTE_FIELDS)
